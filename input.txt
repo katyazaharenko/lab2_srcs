@@ -1,0 +1,11 @@
+10
+Paper_Paper1_Author1_1_2019
+Paper_Paper2_Author2_2_2019
+Paper_Paper3_Author1_3_2019
+Paper_Paper4_Author2_1_2018
+Book_Book 1_Author2_2016_Publisher1
+Book_Book2_иванов_2011_Publisher2
+Book_Book3_Author4_2002_Publisher1
+EResource_ER1_Author10_Ref1_An1
+EResource_ER2_Author1_Ref2_An2
+EResource_ER3_Author5_Ref3_An3
