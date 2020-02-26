@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace Sources_Lab2
 {
@@ -34,7 +36,8 @@ namespace Sources_Lab2
     /// </item>
     /// </list>
     /// </summary>
-    abstract class Source
+    [Serializable]
+    public abstract class Source
     {
         /// <summary>
         /// Свойство Name, определяющее название издания.
@@ -54,6 +57,7 @@ namespace Sources_Lab2
             Name = name;
             Author = author;
         }
+        public Source() { }
         /// <summary>
         /// Функция FindSources для определения, является ли издание искомым.
         /// </summary>
@@ -63,7 +67,10 @@ namespace Sources_Lab2
         /// <param name="strAuthor">Искомая фамилия</param>
         public bool FindSources(string strAuthor)
         {
-            return strAuthor == this.Author;
+            Trace.WriteLine("Запуск метода FindSources");         
+            bool res = strAuthor == this.Author;
+            Trace.WriteLine("Метод FindSources выполнен успешно.");
+            return res;
         }
         /// <summary>
         /// Метод Display для отображения характеристик издания.
@@ -92,7 +99,8 @@ namespace Sources_Lab2
     /// </item>
     /// </list>
     /// </summary>
-    class Book : Source
+    [Serializable]
+    public class Book : Source
     {
         /// <summary>
         /// Свойство Year, определяющее год издания книги.
@@ -107,6 +115,7 @@ namespace Sources_Lab2
         /// <summary>
         /// Конструктор класса Book.
         /// </summary>
+        public Book() { }
         public Book(string name, string author, short year, string publisher) : base(name, author)
         {
             Year = year;
@@ -117,14 +126,17 @@ namespace Sources_Lab2
         /// </summary>
         public override void Display()
         {
+            Trace.WriteLine("Запуск процедуры Display класса Book.");
             Console.WriteLine("Type: Book");
             Console.WriteLine("Name: " + Name);
             Console.WriteLine("Author: " + Author);
             Console.WriteLine("Year: " + Year);
             Console.WriteLine("Publisher: " + Publisher);
+            Trace.WriteLine("Процедура Display выполнена успешно. Данные выведены в консоль.");
         }
     }
-    class Paper : Source
+    [Serializable]
+    public class Paper : Source
     {
         /// <summary>
         /// Свойство Year, определяющее год выпуска газеты.
@@ -139,6 +151,7 @@ namespace Sources_Lab2
         /// <summary>
         /// Конструктор класса Paper.
         /// </summary>
+        public Paper() {}
         public Paper(string name, string author, int papernum, short year) : base(name, author)
         {
             PaperNum = papernum;
@@ -149,14 +162,17 @@ namespace Sources_Lab2
         /// </summary>
         public override void Display()
         {
+            Trace.WriteLine("Запуск процедуры Display класса Paper.");
             Console.WriteLine("Type: Paper");
             Console.WriteLine("Name: " + Name);
             Console.WriteLine("Author: " + Author);
             Console.WriteLine("Paper Number: " + PaperNum);
             Console.WriteLine("Year: " + Year);
+            Trace.WriteLine("Процедура Display выполнена успешно. Данные выведены в консоль.");
         }
     }
-    class EResource : Source
+    [Serializable]
+    public class EResource : Source
     {
         /// <summary>
         /// Свойство Reference, определяющее ссылку на электронный ресурс.
@@ -181,11 +197,13 @@ namespace Sources_Lab2
         /// </summary>
         public override void Display()
         {
+            Trace.WriteLine("Запуск процедуры Display класса EResource.");
             Console.WriteLine("Type: EResource");
             Console.WriteLine("Name: " + Name);
             Console.WriteLine("Author: " + Author);
             Console.WriteLine("Reference: " + Reference);
             Console.WriteLine("Annotation: " + Annotation);
+            Trace.WriteLine("Процедура Display выполнена успешно. Данные выведены в консоль.");
         }
     }
     /// <summary>
@@ -206,12 +224,14 @@ namespace Sources_Lab2
         /// </remarks>       
         public static void ShowCatalog()
         {
+            Trace.WriteLine("Запуск процедуры ShowCatalog");
             Console.WriteLine("---Каталог---");
             foreach (Source s in Catalog)
             {
                 s.Display();
                 Console.WriteLine();
             }
+            Trace.WriteLine("Процедура ShowCatalog выполнена успешно. Данные выведены в консоль.");
         }
         /// <summary>
         /// Процедура InputCatalog() для чтения данных из файла input.txt.
@@ -226,8 +246,10 @@ namespace Sources_Lab2
         /// Первый элемент соответствует типу издания, а последующие - особые
         /// характеристики, соответствующие свойствам каждого производного класса (имя автора, название, год и др.).
         /// </remarks> 
+       
         public static void InputCatalog()
         {
+            Trace.WriteLine("Запуск процедуры InputCatalog");
             string[] arrStr;
             StreamReader sr = new StreamReader("input.txt");
             string str = sr.ReadLine();
@@ -265,7 +287,15 @@ namespace Sources_Lab2
                 str = sr.ReadLine();
             }
             sr.Close();
+
+            /*XmlSerializer ser = new XmlSerializer(typeof(Paper));
+            using (FileStream fs = new FileStream("data.xml", FileMode.OpenOrCreate))
+            {
+                ser.Serialize(fs, Catalog);
+            }*/
+            Trace.WriteLine("Процедура InputCatalog выполнена успешно. Массив Catalog заполнен.");
         }
+
         /// <summary>
         /// Процедура SearchAuthor() для организации интерфейса поиска изданий по фамилии автора.
         /// </summary>
@@ -274,6 +304,7 @@ namespace Sources_Lab2
         /// </remarks> 
         public static void SearchAuthor()
         {
+            Trace.WriteLine("Запуск процедуры SearchAuthor");
             int intCnt;
             Console.WriteLine("Для начала поиска по каталогу введите 1.");
             if (Console.ReadLine() == "1")
@@ -312,6 +343,7 @@ namespace Sources_Lab2
                 }
             }
             Console.WriteLine("Выход из программы.");
+            Trace.WriteLine("Процедура SearchAuthor выполнена успешно.");
         }
         /// <summary>
         /// Процедура Main - точка входа в программу.
