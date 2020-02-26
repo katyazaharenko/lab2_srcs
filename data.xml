@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Paper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Paper1</Name>
+  <Author>Author1</Author>
+  <Year>2019</Year>
+  <PaperNum>1</PaperNum>
+</Paper><?xml version="1.0"?>
+<Paper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Paper2</Name>
+  <Author>Author2</Author>
+  <Year>2019</Year>
+  <PaperNum>2</PaperNum>
+</Paper><?xml version="1.0"?>
+<Paper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Paper3</Name>
+  <Author>Author1</Author>
+  <Year>2019</Year>
+  <PaperNum>3</PaperNum>
+</Paper><?xml version="1.0"?>
+<Paper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Paper4</Name>
+  <Author>Author2</Author>
+  <Year>2018</Year>
+  <PaperNum>1</PaperNum>
+</Paper><?xml version="1.0"?>
+<Book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Book 1</Name>
+  <Author>Author2</Author>
+  <Year>2016</Year>
+  <Publisher>Publisher1</Publisher>
+</Book><?xml version="1.0"?>
+<Book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Book2</Name>
+  <Author>иванов</Author>
+  <Year>2011</Year>
+  <Publisher>Publisher2</Publisher>
+</Book><?xml version="1.0"?>
+<Book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Book3</Name>
+  <Author>Author4</Author>
+  <Year>2002</Year>
+  <Publisher>Publisher1</Publisher>
+</Book><?xml version="1.0"?>
+<EResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ER1</Name>
+  <Author>Author10</Author>
+  <Reference>Ref1</Reference>
+  <Annotation>An1</Annotation>
+</EResource><?xml version="1.0"?>
+<EResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ER2</Name>
+  <Author>Author1</Author>
+  <Reference>Ref2</Reference>
+  <Annotation>An2</Annotation>
+</EResource><?xml version="1.0"?>
+<EResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ER3</Name>
+  <Author>Author5</Author>
+  <Reference>Ref3</Reference>
+  <Annotation>An3</Annotation>
+</EResource>
