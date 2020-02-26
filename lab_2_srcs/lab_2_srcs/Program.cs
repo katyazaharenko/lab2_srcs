@@ -187,6 +187,7 @@ namespace Sources_Lab2
         /// <summary>
         /// Конструктор класса EResources.
         /// </summary>
+        public EResource() { }
         public EResource(string name, string author, string reference, string annotation) : base(name, author)
         {
             Annotation = annotation;
@@ -288,11 +289,44 @@ namespace Sources_Lab2
             }
             sr.Close();
 
-            /*XmlSerializer ser = new XmlSerializer(typeof(Paper));
-            using (FileStream fs = new FileStream("data.xml", FileMode.OpenOrCreate))
+
+            // Работа с XML-файлом
+            string xmlFile = "data.xml";
+            if (File.Exists(xmlFile)){
+                File.Delete(xmlFile);
+            }
+            
+            foreach (Source s in Catalog)
             {
-                ser.Serialize(fs, Catalog);
-            }*/
+                if( Convert.ToString(s.GetType()) == "Sources_Lab2.Paper")
+                {
+                    XmlSerializer serPaper = new XmlSerializer(typeof(Paper));
+                    using (FileStream fs = new FileStream(xmlFile, FileMode.Append))
+                    {
+                        serPaper.Serialize(fs, s);
+                    }
+                }
+                else if(Convert.ToString(s.GetType()) == "Sources_Lab2.Book")
+                {
+                    XmlSerializer serBook = new XmlSerializer(typeof(Book));
+                    using (FileStream fs = new FileStream(xmlFile, FileMode.Append))
+                    {
+                        serBook.Serialize(fs, s);
+                    }
+                }
+                else if (Convert.ToString(s.GetType()) == "Sources_Lab2.EResource")
+                {
+                    XmlSerializer serERes = new XmlSerializer(typeof(EResource));
+                    using (FileStream fs = new FileStream(xmlFile, FileMode.Append))
+                    {
+                        serERes.Serialize(fs, s);
+                    }
+                }
+
+            }
+            
+
+            
             Trace.WriteLine("Процедура InputCatalog выполнена успешно. Массив Catalog заполнен.");
         }
 
@@ -311,7 +345,6 @@ namespace Sources_Lab2
             {
                 while (true)
                 {
-
                     Console.WriteLine("Введите фамилию автора издания:");
                     string strSearchAuthor = Console.ReadLine();
                     Console.WriteLine();
