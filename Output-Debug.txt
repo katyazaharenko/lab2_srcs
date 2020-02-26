@@ -1,0 +1,46 @@
+﻿'lab_2_srcs.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. 
+'lab_2_srcs.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Users\Екатерина Захаренко\source\repos\lab2_srcs\lab_2_srcs\lab_2_srcs\bin\Debug\lab_2_srcs.exe'. Symbols loaded.
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. 
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. 
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. 
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. 
+Запуск процедуры InputCatalog
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'Microsoft.GeneratedCode'. 
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'Microsoft.GeneratedCode'. 
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+Exception thrown: 'System.IO.FileNotFoundException' in mscorlib.dll
+'lab_2_srcs.exe' (CLR v4.0.30319: lab_2_srcs.exe): Loaded 'Microsoft.GeneratedCode'. 
+Процедура InputCatalog выполнена успешно. Массив Catalog заполнен.
+Запуск процедуры ShowCatalog
+Запуск процедуры Display класса Paper.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Paper.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Paper.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Paper.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Book.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Book.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса Book.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса EResource.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса EResource.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Запуск процедуры Display класса EResource.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Процедура ShowCatalog выполнена успешно. Данные выведены в консоль.
+Запуск процедуры SearchAuthor
+Запуск метода FindSources
+Метод FindSources выполнен успешно.
+Запуск процедуры Display класса Book.
+Процедура Display выполнена успешно. Данные выведены в консоль.
+Процедура SearchAuthor выполнена успешно.
+The program '[12424] lab_2_srcs.exe' has exited with code 0 (0x0).
