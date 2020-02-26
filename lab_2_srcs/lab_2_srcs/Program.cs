@@ -26,6 +26,10 @@ namespace Sources_Lab2
     /// <description>Конструктор класса.</description>
     /// </item>
     /// <item>
+    /// <term>Source</term>
+    /// <description>Конструктор класса по умолчанию.</description>
+    /// </item>
+    /// <item>
     /// <term>FindSources</term>
     /// <description>Проверка соответствия искомой фамилии и той, 
     /// что определена для конкретного объекта класса.</description>
@@ -94,6 +98,10 @@ namespace Sources_Lab2
     /// <description>Конструктор класса.</description>
     /// </item>
     /// <item>
+    /// <term>Book</term>
+    /// <description>Конструктор класса по умолчанию.</description>
+    /// </item>
+    /// <item>
     /// <term>Display</term>
     /// <description>Переопределенный метод для вывода информации о книге.</description>
     /// </item>
@@ -113,9 +121,12 @@ namespace Sources_Lab2
         /// <value>Наименование издательства книги</value>
         public string Publisher { get; set; }
         /// <summary>
-        /// Конструктор класса Book.
+        /// Конструктор класса Book по умолчанию.
         /// </summary>
         public Book() { }
+        /// <summary>
+        /// Конструктор класса Book.
+        /// </summary>
         public Book(string name, string author, short year, string publisher) : base(name, author)
         {
             Year = year;
@@ -135,6 +146,31 @@ namespace Sources_Lab2
             Trace.WriteLine("Процедура Display выполнена успешно. Данные выведены в консоль.");
         }
     }
+    /// <summary>
+    /// Производный класс <c>Paper</c>.
+    /// <list type="bullet">
+    /// <item>
+    /// <term>Year</term>
+    /// <description>Свойство, соответсвующее году издания газеты.</description>
+    /// </item>
+    /// <item>
+    /// <term>PaperNum</term>
+    /// <description>Свойство PaperNum, определяющее номер выпуска газеты.</description>
+    /// </item>
+    /// <item>
+    /// <term>Paper</term>
+    /// <description>Конструктор класса.</description>
+    /// </item>
+    /// <item>
+    /// <term>Paper</term>
+    /// <description>Конструктор класса по умолчанию.</description>
+    /// </item>
+    /// <item>
+    /// <term>Display</term>
+    /// <description>Переопределенный метод для вывода информации о газете.</description>
+    /// </item>
+    /// </list>
+    /// </summary>
     [Serializable]
     public class Paper : Source
     {
@@ -149,9 +185,12 @@ namespace Sources_Lab2
         /// <value>Номер выпуска газеты</value>
         public int PaperNum { get; set; }
         /// <summary>
-        /// Конструктор класса Paper.
+        /// Конструктор класса Paper по умолчанию.
         /// </summary>
         public Paper() {}
+        /// <summary>
+        /// Конструктор класса Paper.
+        /// </summary>
         public Paper(string name, string author, int papernum, short year) : base(name, author)
         {
             PaperNum = papernum;
@@ -171,6 +210,31 @@ namespace Sources_Lab2
             Trace.WriteLine("Процедура Display выполнена успешно. Данные выведены в консоль.");
         }
     }
+    /// <summary>
+    /// Производный класс <c>EResource</c>.
+    /// <list type="bullet">
+    /// <item>
+    /// <term>Reference</term>
+    /// <description>Свойство Reference, определяющее ссылку на электронный ресурс.</description>
+    /// </item>
+    /// <item>
+    /// <term>Annotation</term>
+    /// <description>Свойство Annotation, определяющее аннотацию к ресурсу.</description>
+    /// </item>
+    /// <item>
+    /// <term>EResource</term>
+    /// <description>Конструктор класса.</description>
+    /// </item>
+    /// <item>
+    /// <term>EResource</term>
+    /// <description>Конструктор класса по умолчанию.</description>
+    /// </item>
+    /// <item>
+    /// <term>Display</term>
+    /// <description>Переопределенный метод для вывода информации об электронном ресурсе.</description>
+    /// </item>
+    /// </list>
+    /// </summary>
     [Serializable]
     public class EResource : Source
     {
@@ -185,9 +249,12 @@ namespace Sources_Lab2
         /// <value>Аннотация к ресурсу.</value>
         public string Annotation { get; set; }
         /// <summary>
-        /// Конструктор класса EResources.
+        /// Конструктор класса EResources по умолчанию.
         /// </summary>
         public EResource() { }
+        /// <summary>
+        /// Конструктор класса EResources.
+        /// </summary>
         public EResource(string name, string author, string reference, string annotation) : base(name, author)
         {
             Annotation = annotation;
@@ -324,9 +391,6 @@ namespace Sources_Lab2
                 }
 
             }
-            
-
-            
             Trace.WriteLine("Процедура InputCatalog выполнена успешно. Массив Catalog заполнен.");
         }
 
